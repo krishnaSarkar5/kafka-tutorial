@@ -3,7 +3,6 @@ package com.kafkatutorial.kafka;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,7 @@ public class KafkaProducer {
 
 
     public  void sendMessage(String  message){
-        LOGGER.info("Message sent as %s ", message);
+        LOGGER.info("Message sent as"+ message);
         kafkaTemplate.send("new_example_topic",message);
     }
 }
