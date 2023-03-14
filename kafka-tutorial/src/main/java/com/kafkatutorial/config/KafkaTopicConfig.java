@@ -13,7 +13,7 @@ public class KafkaTopicConfig {
     @Bean
     public NewTopic createNewTopic(){
         return TopicBuilder.name("new_example_topic") // name of the topic
-//                .partitions(10) // no of partition declare at the creation time if not provived it will set a default value
+//                .partitions(10) // no of partition declare at the creation time if not provided it will set a default value
                 .build();
     }
 }
