@@ -16,4 +16,11 @@ public class KafkaTopicConfig {
 //                .partitions(10) // no of partition declare at the creation time if not provided it will set a default value
                 .build();
     }
+
+    @Bean
+    public NewTopic createJsonTopic(){
+        return TopicBuilder.name("new_user_topic") // name of the topic
+//                .partitions(10) // no of partition declare at the creation time if not provided it will set a default value
+                .build();
+    }
 }
