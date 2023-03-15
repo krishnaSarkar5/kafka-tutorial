@@ -13,14 +13,14 @@ import org.springframework.stereotype.Service;
 public class KafkaProducer {
 
     @Autowired
-    private KafkaTemplate<String ,User > kafkaTemplate;
+    private KafkaTemplate<String ,String  > kafkaTemplate;
 
 
     public void sendMessage(User user){
 
-        Message<User> message = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC,"demo").build();
+//        Message<Object> message = MessageBuilder.withPayload(user).setHeader(KafkaHeaders.TOPIC,"demo").build();
 
-        kafkaTemplate.send(message);
+        kafkaTemplate.send("example2",user.toString());
 
     }
 }
